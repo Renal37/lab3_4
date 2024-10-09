@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <a href="{% url 'index' %}">Главная</a>
+  <a href="{% url 'about' %}">О нас</a>
+  <a href="/gallery">Галерея</a>
+{% block content %}
+<h1>Галерея</h1>
+<div class="gallery">
+    {% for image in images %}
+        <div class="gallery-item">
+            <img src="{{ image }}" alt="Dog image">
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
+</body>
+</html>
