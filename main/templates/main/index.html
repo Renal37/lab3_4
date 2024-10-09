@@ -9,7 +9,8 @@
 
   <a href="{% url 'index' %}">Главная</a>
   <a href="{% url 'about' %}">О нас</a>
-  <a href="/gallery">О нас</a>
+   <a href="/gallery">Галерея</a>
+  <a href="/cat">Коты</a>
     {% if request.user.is_anonymous %}
     <div><a href="/login">Войти</a></div>
     {% else %}

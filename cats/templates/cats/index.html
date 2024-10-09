@@ -10,13 +10,11 @@
    <a href="/gallery">Галерея</a>
   <a href="/cat">Коты</a>
 {% block content %}
-<h1>КОТЫ</h1>
+<h1>Галерея</h1>
 <div class="gallery">
-    {% for image in images %}
-        <div class="gallery-item">
-            <img src="{{ image }}" alt="Dog image">
-        </div>
-    {% endfor %}
+     {% for cat_image in images %}
+            <img src="{{ cat_image.image.url }}" alt="{{ cat_image.title }}" width="300">
+        {% endfor %}
 </div>
 {% endblock %}
 </body>
